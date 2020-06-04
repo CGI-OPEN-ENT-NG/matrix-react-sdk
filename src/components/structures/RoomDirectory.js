@@ -614,12 +614,12 @@ export default createReactClass({
                     placeholder={placeholder}
                     showJoinButton={showJoinButton}
                 />
-                <NetworkDropdown
+                {/*<NetworkDropdown
                     protocols={this.protocols}
                     onOptionChange={this.onOptionChange}
                     selectedServerName={this.state.roomServer}
                     selectedInstanceId={this.state.instanceId}
-                />
+                />*/}
             </div>;
         }
         const explanation =
