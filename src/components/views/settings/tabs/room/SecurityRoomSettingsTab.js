@@ -33,8 +33,8 @@ export default class SecurityRoomSettingsTab extends React.Component {
         super();
 
         this.state = {
-            joinRule: "invite",
-            guestAccess: "can_join",
+            joinRule: "public",
+            guestAccess: "forbidden",
             history: "shared",
             hasAliases: false,
             encrypted: false,
@@ -51,7 +51,7 @@ export default class SecurityRoomSettingsTab extends React.Component {
         const joinRule = this._pullContentPropertyFromEvent(
             state.getStateEvents("m.room.join_rules", ""),
             'join_rule',
-            'invite',
+            'public',
         );
         const guestAccess = this._pullContentPropertyFromEvent(
             state.getStateEvents("m.room.guest_access", ""),

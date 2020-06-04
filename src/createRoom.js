@@ -97,7 +97,7 @@ export default function createRoom(opts) {
             type: 'm.room.guest_access',
             state_key: '',
             content: {
-                guest_access: 'can_join',
+                guest_access: 'forbidden',
             },
         });
     }

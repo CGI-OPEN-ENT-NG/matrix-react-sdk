@@ -995,7 +995,7 @@ export default class MatrixChat extends React.PureComponent<IProps, IState> {
         }).close;
     }
 
-    private async createRoom(defaultPublic = false) {
+    private async createRoom(defaultPublic = true) {
         const CreateRoomDialog = sdk.getComponent('dialogs.CreateRoomDialog');
         const modal = Modal.createTrackedDialog('Create Room', '', CreateRoomDialog, { defaultPublic });
 
