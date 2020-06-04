@@ -306,7 +306,7 @@ export default createReactClass({
                 { settingsButton }
                 { pinnedEventsButton }
                 { shareRoomButton }
-                { manageIntegsButton }
+                { /*manageIntegsButton*/ }
                 { forgetButton }
                 { searchButton }
             </div>;
