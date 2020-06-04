@@ -41,6 +41,8 @@ ComposerAvatar.propTypes = {
 };
 
 function CallButton(props) {
+    const room = MatrixClientPeg.get().getRoom(props.roomId);
+    const members = room.getJoinedMembers();
     const AccessibleButton = sdk.getComponent('elements.AccessibleButton');
     const onVoiceCallClick = (ev) => {
         dis.dispatch({
@@ -50,7 +52,8 @@ function CallButton(props) {
         });
     };
 
-    return (<AccessibleButton className="mx_MessageComposer_button mx_MessageComposer_voicecall"
+    if (members.length > 2) return null;
+    else return (<AccessibleButton className="mx_MessageComposer_button mx_MessageComposer_voicecall"
             onClick={onVoiceCallClick}
             title={_t('Voice call')}
         />);
@@ -61,6 +64,8 @@ CallButton.propTypes = {
 };
 
 function VideoCallButton(props) {
+    const room = MatrixClientPeg.get().getRoom(props.roomId);
+    const members = room.getJoinedMembers();
     const AccessibleButton = sdk.getComponent('elements.AccessibleButton');
     const onCallClick = (ev) => {
         dis.dispatch({
@@ -70,7 +75,8 @@ function VideoCallButton(props) {
         });
     };
 
-    return <AccessibleButton className="mx_MessageComposer_button mx_MessageComposer_videocall"
+    if (members.length > 2) return null;
+    else return <AccessibleButton className="mx_MessageComposer_button mx_MessageComposer_videocall"
         onClick={onCallClick}
         title={_t('Video call')}
     />;
