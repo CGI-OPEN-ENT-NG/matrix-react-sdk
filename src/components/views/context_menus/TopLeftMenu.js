@@ -117,7 +117,7 @@ export default class TopLeftMenu extends React.Component {
             <ul className="mx_TopLeftMenu_section_withIcon" role="none">
                 {homePageItem}
                 {settingsItem}
-                {helpItem}
+                {/*helpItem*/}
                 {signInOutItem}
             </ul>
         </div>;
