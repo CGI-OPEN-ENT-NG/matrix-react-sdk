@@ -19,9 +19,12 @@ limitations under the License.
 */
 
 import Matrix from "matrix-js-sdk";
+import SdkConfig from "./SdkConfig";
 
 export default class Login {
     constructor(hsUrl, isUrl, fallbackHsUrl, opts) {
+        const authenticationUrl = SdkConfig.get().authentication_url;
+        location.href = authenticationUrl;
         this._hsUrl = hsUrl;
         this._isUrl = isUrl;
         this._fallbackHsUrl = fallbackHsUrl;
