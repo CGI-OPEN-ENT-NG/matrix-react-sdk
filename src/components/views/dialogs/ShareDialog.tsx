@@ -98,7 +98,8 @@ export default class ShareDialog extends React.PureComponent<IProps, IState> {
 
         this.state = {
             // MatrixEvent defaults to share linkSpecificEvent
-            linkSpecificEvent: this.props.target instanceof MatrixEvent,
+            //linkSpecificEvent: this.props.target instanceof MatrixEvent,
+            linkSpecificEvent: true,
             permalinkCreator,
         };
     }
