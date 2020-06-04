@@ -216,9 +216,9 @@ export default class ShareDialog extends React.PureComponent<IProps, IState> {
                     </a>
                 </div>
                 { checkbox }
-                <hr />
+                {/*<hr />*/}
 
-                <div className="mx_ShareDialog_split">
+                {/*<div className="mx_ShareDialog_split">
                     <div className="mx_ShareDialog_qrcode_container">
                         <QRCode data={matrixToUrl} width={256} />
                     </div>
@@ -236,7 +236,7 @@ export default class ShareDialog extends React.PureComponent<IProps, IState> {
                             </a>
                         )) }
                     </div>
-                </div>
+                        </div>*/}
             </div>
         </BaseDialog>;
     }
