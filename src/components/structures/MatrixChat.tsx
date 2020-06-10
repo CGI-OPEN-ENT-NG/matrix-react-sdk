@@ -18,6 +18,7 @@ limitations under the License.
 */
 
 import React, { createRef } from 'react';
+import Matrix from "matrix-js-sdk";
 import { InvalidStoreError } from "matrix-js-sdk/src/errors";
 import { RoomMember } from "matrix-js-sdk/src/models/room-member";
 import { MatrixEvent } from "matrix-js-sdk/src/models/event";
@@ -311,6 +312,17 @@ export default class MatrixChat extends React.PureComponent<IProps, IState> {
 
                     // don't do anything else until the page reloads - just stay in
                     // the 'loading' state.
+                    return;
+                }
+
+
+                const accessToken = localStorage.getItem('mx_access_token');
+                if (!accessToken) {
+                    const client = Matrix.createClient({
+                        baseUrl: this.props.config.default_server_config['m.homeserver'].base_url
+                    });
+                    //const loginLogic = new Login("https://peertube-dev.support-ent.fr", "https://vector.im", this.props.config.fallback_hs_url, null);
+                    PlatformPeg.get().startSingleSignOn(client, "sso", "/");
                     return;
                 }
 
