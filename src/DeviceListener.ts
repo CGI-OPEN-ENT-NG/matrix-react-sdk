@@ -207,7 +207,7 @@ export default class DeviceListener {
                     showSetupEncryptionToast(SetupKind.UPGRADE_ENCRYPTION);
                 } else {
                     // No cross-signing or key backup on account (set up encryption)
-                    showSetupEncryptionToast(SetupKind.SET_UP_ENCRYPTION);
+                    //showSetupEncryptionToast(SetupKind.SET_UP_ENCRYPTION);
                 }
             }
         }

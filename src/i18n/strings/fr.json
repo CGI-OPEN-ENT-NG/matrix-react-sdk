@@ -2481,5 +2481,6 @@
     "Restart": "Redémarrer",
     "Upgrade your Riot": "Mettre à niveau votre Riot",
     "A new version of Riot is available!": "Une nouvelle version de Riot est disponible !",
-    "New version available. <a>Update now.</a>": "Nouvelle version disponible. <a>Faire la mise à niveau maintenant.</a>"
+    "New version available. <a>Update now.</a>": "Nouvelle version disponible. <a>Faire la mise à niveau maintenant.</a>",
+    "Be Careful, to be completely logged out of the app, you need to close this tab": "Attention, pour être complètement déconnecté de l'application, veuillez fermer cet onglet"
 }

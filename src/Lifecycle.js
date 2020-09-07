@@ -42,6 +42,7 @@ import {Mjolnir} from "./mjolnir/Mjolnir";
 import DeviceListener from "./DeviceListener";
 import {Jitsi} from "./widgets/Jitsi";
 import {HOMESERVER_URL_KEY, ID_SERVER_URL_KEY} from "./BasePlatform";
+import {_t} from "./languageHandler";
 
 /**
  * Called at startup, to attempt to build a logged-in Matrix session. It tries
@@ -645,6 +646,8 @@ export async function onLoggedOut() {
     dis.dispatch({action: 'on_logged_out'}, true);
     stopMatrixClient();
     await _clearStorage();
+    const alertMessage = _t("Be Careful, to be completely logged out of the app, you need to close this tab");
+    window.alert(alertMessage);
 }
 
 /**
